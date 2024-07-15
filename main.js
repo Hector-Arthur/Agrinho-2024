@@ -1,41 +1,46 @@
-const textos = document.querySelectorAll(".aba-conteudo");
-const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2030-01-01T00:00:00");
 
-const tempo = tempoObjetivo1 ;
 
-function calculaTempo(tempoObjetivo) {
-    let tempoAtual = new Date();
-    let tempoFinal = tempoObjetivo - tempoAtual;
-    let segundos = Math.floor(tempoFinal / 1000);
-    let minutos = Math.floor(segundos / 60);
-    let horas = Math.floor(minutos / 60);
-    let dias = Math.floor(horas / 24);
-  
-    segundos %= 60;
-    minutos %= 60;
-    horas %= 24;
-    if (tempoFinal > 0) {
-      return [dias, horas, minutos, segundos];
-    } else {
-      return [0, 0, 0, 0];
-    }
+function atualizaCronometro() {
+  const dias = document.getElementById('dias');
+  const horas = document.getElementById('horas');
+  const min = document.getElementById('min');
+  const seg = document.getElementById('seg');
+
+  const dataFim = new Date('November 4, 2024 23:59:59').getTime();
+  const agora = new Date().getTime();
+  const tempoRestante = dataFim - agora;
+
+  const diasRestantes = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+  const horasRestantes = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutosRestantes = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+  const segundosRestantes = Math.floor((tempoRestante % (1000 * 60)) / 1000);
+
+  dias.textContent = diasRestantes;
+  horas.textContent = horasRestantes;
+  min.textContent = minutosRestantes;
+  seg.textContent = segundosRestantes;
+
+  if (tempoRestante < 0) {
+    dias.textContent = 0;
+    horas.textContent = 0;
+    min.textContent = 0;
+    seg.textContent = 0;
   }
+}
 
-  function atualizaCronometro() {
-    document.getElementById("dias0").textContent = calculaTempo(tempo)[0];
-    document.getElementById("horas0").textContent = calculaTempo(tempo)[1];
-    document.getElementById("min0").textContent = calculaTempo(tempo)[2];
-    document.getElementById("seg0").textContent = calculaTempo(tempo)[3];
-  
-    for (let i = 0; i < contadores.length; i++) {
-      // contadores[i].textContent = calculaTempo(tempos[i]);
-    }
-  }
+setInterval(atualizaCronometro, 1000);
 
-  function comecaCronometro() {
-    atualizaCronometro();
-    setInterval(atualizaCronometro, 1000);
+// Função para rolar para o topo da página
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Função para mostrar ou esconder o botão de "voltar ao topo" com base na rolagem da página
+window.onscroll = function() {
+  const backToTopButton = document.getElementById('botao__inicio');
+  if (document.body.scrollTop > window.innerHeight / 2 || document.documentElement.scrollTop > window.innerHeight / 2) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
   }
-  
-  comecaCronometro();
+};
