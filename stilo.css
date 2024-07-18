@@ -7,7 +7,7 @@
 :root {
   --verde-fundo: #e7f3e9;
   --branco-principal: #ffffff;
-  --fonte-principal: "Lustria";
+  --fonte-principal: "Aldrich";
   --verde-principal: #4caf50;
   --marrom-principal: #795548;
   --azul-principal: #2196f3;
@@ -57,15 +57,15 @@ a:active {
   padding: 100px 0;
 }
 .logo__principal {
-  width: 250px;
+  width: 20em;
 }
 .texto__cabecalho {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 700;
   color: var(--branco-principal);
 }
 .subtitulo__cabecalho {
-  font-size: 1.5em;
+  font-size: 2em;
   color: var(--branco-principal);
   margin-bottom: 20px;
 }
@@ -77,13 +77,13 @@ a:active {
 }
 .secao1__titulo {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 3em;
   color: var(--verde-principal);
   margin-bottom: 0.5em;
 }
 .secao1__texto {
   margin-top: 20px;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.6;
   color: var(--marrom-principal);
 }
@@ -96,16 +96,32 @@ a:active {
 }
 .secao2__titulo {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 3em;
   color: var(--verde-principal);
   margin-bottom: 0.5em;
 }
 .secao2__texto {
   margin-top: 20px;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.6;
   color: var(--marrom-principal);
 }
+/*
+.secao2__botao{
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--azul-principal);
+  color: var(--branco-principal);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.secao2__botao:hover{
+  background-color: var(--verde-principal);
+}
+*/
 /* estilo seção 3*/
 .secao3__titulo {
   text-align: center;
@@ -153,7 +169,7 @@ a:active {
   text-align: center;
 }
 .secao5__texto {
-  font-size: 1.25em;
+  font-size: 1.5em;
   color: var(--marrom-principal);
 }
 
@@ -178,7 +194,7 @@ a:active {
   color: var(--marrom-principal);
 }
 .form-mensagem input, .form-mensagem textarea {
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 10px;
   width: 50em;
   border: 1px solid var(--marrom-principal);
