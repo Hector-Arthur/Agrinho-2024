@@ -143,6 +143,17 @@ a:active {
 }
 
 /* estilo seção 4*/
+.fotos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 1em;
+}
+.fotos img {
+  width: 90%;
+}
+
+/* estilo seção 4*/
 .secao4__imagem {
   background-image: url("img/campo.jpeg");
   background-size: cover;
