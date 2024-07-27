@@ -106,22 +106,17 @@ a:active {
   line-height: 1.6;
   color: var(--marrom-principal);
 }
-/*
 .secao2__botao{
-    position: fixed;
-  bottom: 20px;
-  right: 20px;
   padding: 10px 20px;
-  background-color: var(--azul-principal);
+  background-color: var(--verde-principal);
   color: var(--branco-principal);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 .secao2__botao:hover{
-  background-color: var(--verde-principal);
+  background-color: var(--azul-principal);
 }
-*/
 /* estilo seção 3*/
 .secao3__titulo {
   text-align: center;
