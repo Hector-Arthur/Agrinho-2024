@@ -109,7 +109,6 @@ a:active {
 .secao2__botao{
   padding: 10px 20px;
   background-color: var(--verde-principal);
-  color: var(--branco-principal);
   border: none;
   border-radius: 5px;
   cursor: pointer;
