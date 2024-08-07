@@ -1,23 +1,23 @@
 :root{
     --cor-fundo: #171919 ;
-    --cor-principal: #336699 ;
+    --cor-principal: #008000;
     --cor-secundaria: #212333; 
     --cor-destaque: #30dd58;
     --cor-texto: #eff5ee;
 }
 .caixa-principal{
     background-color: var(--cor-principal);
-    width: 95%;
+    width: 85%;
     max-width: 800px;
     text-align: center;
     padding: 30px;
     margin-bottom: 40px;
+    border-radius: 1em;
 }
 .caixa-perguntas {
   color: var(--cor-texto);
   margin-bottom: 30px;
   font-size: 30px;
-
 }
 .texto-resultado{
     color: var(--cor-texto);
@@ -42,4 +42,18 @@ button {
 button:hover{
     background-color: var(--cor-destaque);
     color: var(--cor-fundo);
+}
+
+@media (max-width: 600px) {
+h1{
+color: var(--cor-destaque);
+margin-bottom: 20px;
+font-size: 25px;
+}
+.caixa-perguntas {
+    color: var(--cor-texto);
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
 }
