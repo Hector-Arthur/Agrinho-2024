@@ -6,7 +6,7 @@
     --cor-texto: #eff5ee;
 }
 .caixa-principal{
-    background-color: var(--cor-principal);
+    background-color: var(--cor-fundo);
     width: 85%;
     max-width: 800px;
     text-align: center;
@@ -29,15 +29,15 @@ h1{
     font-size: 35px;
 }
 button {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-destaque);
     color: var(--cor-texto);
     border: none;
     border-radius: 15px;
     padding: 15px;
     transition: background-color 0.3s;
-    margin-bottom: 20px;
     margin: 10px;
     font-size: 20px;
+    text-shadow: 0.1em 0.1em 0.2em black
 }
 button:hover{
     background-color: var(--cor-destaque);
