@@ -19,6 +19,7 @@ Já um estudo do Instituto Brasileiro de Geografia e Estatística (IBGE) aponta 
 
 ### Links para acessar o Site:
 [Vercel](agrinho-2024-zeta-flax.vercel.app/)
+
 [GitHub Pages](https://hector-arthur.github.io/Agrinho-2024/)
 
 
